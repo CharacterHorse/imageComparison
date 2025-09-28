@@ -34,3 +34,20 @@ func OpenImage(filePath string) (image.Image, error) {
 	ext := strings.ToLower(filePath[strings.LastIndex(filePath, "."):])
 	return DecodeImage(file, ext)
 }
+
+func SaveImage(img image.Image, filePath string) error {
+	file, err := os.Create(filePath)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	ext := strings.ToLower(filePath[strings.LastIndex(filePath, "."):])
+	switch ext {
+	case ".jpg", ".jpeg":
+		err = jpeg.Encode(file, img, &jpeg.Options{Quality: 100})
+	case ".png":
+		err = png.Encode(file, img)
+	}
+	return err
+}
