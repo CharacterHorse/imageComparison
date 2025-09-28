@@ -1,11 +1,7 @@
-package imageComparison
+package imagecomparison
 
 import (
 	"image"
-	"image/jpeg"
-	"image/png"
-	"os"
-	"strings"
 )
 
 func ToGray(img image.Image) *image.Gray {

@@ -1,4 +1,4 @@
-package imageComparison
+package imagecomparison
 
 import (
 	"image"

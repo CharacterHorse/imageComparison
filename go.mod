@@ -1,3 +1,3 @@
-module github.com/CharacterHorse/imageComparison
+module github.com/CharacterHorse/imagecomparison
 
 go 1.25.1

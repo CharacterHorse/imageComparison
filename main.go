@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/CharacterHorse/imageComparison/imageComparison"
+	"github.com/CharacterHorse/imagecomparison/imagecomparison"
 )
 
 func main() {
 	fmt.Println("Image Decoder Example")
-	img, err := imageComparison.OpenImage("/home/raghav/nyx.jpg")
+	img, err := imagecomparison.OpenImage("/home/raghav/nyx.jpg")
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
